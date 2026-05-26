@@ -1,0 +1,212 @@
+---
+title: "ESB-vaktin & Þingfréttir"
+subtitle: "Databeers #15"
+author:
+  - name: Brynjólfur Gauti Guðrúnar Jónsson
+date: 2026-05-27
+format:
+  revealjs:
+    theme: theme.scss
+    simplemenu:
+      flat: false
+      barhtml:
+        header: "<div class='menubar mb-10'><ul class='menu'></ul><div>"
+        footer: "<div class='footer footer-default' style='display: block;'> <a href='https://metill.is/databeers15' target='_blank'>metill.is/databeers15</a></div>"
+html-math-method: plain
+revealjs-plugins:
+  - simplemenu
+---
+
+## {data-name="Intro" .no-heading}
+
+::: {.landscape-grid}
+
+::: {.landscape-project}
+
+[ESB-vaktin]{.project-name}
+
+[*EU referendum, fact-checked*]{.project-tagline}
+
+:::
+
+::: {.landscape-project}
+
+[Þingfréttir]{.project-name}
+
+[*Alþingi pundit, in English*]{.project-tagline}
+
+:::
+
+::: {.landscape-project}
+
+[Metill.is]{.project-name}
+
+[*Public-interest data platform*]{.project-tagline}
+
+:::
+
+::: {.landscape-project}
+
+[Sirkabát]{.project-name}
+
+[*Podcast with Georg Gylfason*]{.project-tagline}
+
+:::
+
+:::
+
+## {data-name="Þingfréttir" .no-heading}
+
+![](Figures/thingfrettir-landing.png){.site-frame fig-align="center" width="72%"}
+
+## {.no-heading}
+
+![](Figures/thingfrettir-article.png){.site-frame fig-align="center" width="58%"}
+
+## {.no-heading}
+
+::: columns
+::: {.column width="70%"}
+![](Figures/thingfrettir-charts.png){.site-frame fig-align="center" width="100%"}
+:::
+::: {.column width="30%"}
+
+::: {.chart-callout .fragment}
+[Icelandic review]{.label}
+
+[Miðeind]{.name}
+:::
+
+:::
+:::
+
+## {data-name="ESB-vaktin" .no-heading}
+
+![](Figures/esbvaktin-landing.png){.site-frame fig-align="center" width="72%"}
+
+## {.no-heading}
+
+::: {.headline-quote}
+"What would possible Icelandic **membership** in the EU cost?"
+:::
+
+[Vísir · 31 March 2026]{.headline-source}
+
+## {.no-heading}
+
+::: {.worked-example}
+
+::: {.we-step}
+
+[Claim]{.label}
+
+[*"Iceland has adopted 80% of EU regulation"*]{.content}
+
+:::
+
+[↓]{.we-arrow}
+
+::: {.we-step}
+
+[Evidence]{.label}
+
+[EEA-LEGAL-001 · EEA-DATA-017 · EEA-LEGAL-006]{.content}
+
+:::
+
+[↓]{.we-arrow}
+
+::: {.we-step .we-verdict}
+
+[Verdict]{.label}
+
+[Partially confirmed]{.content}
+
+:::
+
+:::
+
+::: {.we-counts}
+**503** articles · **2,673** claims · **516** sources
+:::
+
+## {.no-heading}
+
+![](Figures/verdicts.svg){fig-align="center" width="78%"}
+
+## {.no-heading .reframe-slide}
+
+::: {.reframe}
+
+An LLM is a tool.
+
+::: {.fragment}
+Verify the methods.
+:::
+
+::: {.fragment}
+Fail loudly.
+:::
+
+:::
+
+## {data-name="Closing" .no-heading}
+
+::: {.thinkers}
+
+::: {.thinker}
+
+[Tim Harford]{.thinker-name}
+
+[calm down first]{.tag}
+
+:::
+
+::: {.thinker}
+
+[David Spiegelhalter]{.thinker-name}
+
+[inform, not persuade]{.tag}
+
+:::
+
+::: {.thinker}
+
+[Onora O'Neill]{.thinker-name}
+
+[trustworthiness over trust]{.tag}
+
+:::
+
+:::
+
+## {.no-heading}
+
+::: {.three-tips}
+
+::: {.fragment}
+[*"Does this make me feel emotional?"*]{.tip}
+
+[— Tim Harford]{.attribution}
+:::
+
+::: {.fragment}
+[*"Is someone trying to inform me, or to persuade me?"*]{.tip}
+
+[— David Spiegelhalter]{.attribution}
+:::
+
+::: {.fragment}
+[*"Don't try to increase trust — demonstrate trustworthiness."*]{.tip}
+
+[— Onora O'Neill]{.attribution}
+:::
+
+:::
+
+## Thank you {.thank-you}
+
+- [metill.is](https://metill.is)
+- [esbvaktin.is](https://esbvaktin.is)
+- [thingfrettir.is](https://thingfrettir.is)
+- *Sirkabát* podcast (with Georg Gylfason)

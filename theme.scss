@@ -1,0 +1,583 @@
+/*-- scss:defaults --*/
+
+// Metill brand — Fraunces / Source Sans 3 / Geist Mono / Jökull teal.
+// Source of truth: ~/Metill-ehf/DESIGN.md
+// See ../../CLAUDE.md "Brand" for the bucket-level policy.
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@300..900&family=Geist+Mono:wght@100..900&display=swap");
+
+$jokull:        #1B6B8A;
+$jokull-hover:  #145A73;
+$midnaetursol:  #C4841D;
+$basalt:        #1C1C28;
+$pappir:        #FAFAF7;
+$surface:       #FFFFFF;
+$border:        #E2E4E8;
+
+$primary:                       $jokull;
+$secondary:                     $midnaetursol;
+$body-bg:                       $pappir;
+$body-color:                    $basalt;
+
+$font-size-base:                1rem;
+$font-family-sans-serif:        "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-monospace:         "Geist Mono", "JetBrains Mono", "Fira Code", monospace;
+
+$headings-font-family:          "Fraunces", $font-family-sans-serif;
+$headings-font-weight:          500;
+$headings-color:                $basalt;
+
+$link-color:                    $primary;
+$link-hover-color:              $jokull-hover;
+
+/*-- scss:rules --*/
+
+// =========================================================================
+// BASE TYPOGRAPHY — force Metill brand fonts (Quarto's revealjs theme
+// doesn't read the Sass vars directly; explicit selectors needed)
+// =========================================================================
+
+.reveal {
+  font-family: $font-family-sans-serif;
+  color: $basalt;
+}
+
+.reveal .slides {
+  font-size: 1.05em;
+}
+
+.reveal p,
+.reveal li,
+.reveal blockquote {
+  font-family: $font-family-sans-serif;
+  line-height: 1.55;
+  color: $basalt;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: $headings-font-family;
+  font-weight: 500;
+  color: $basalt;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.reveal h1 { font-size: 2.8rem; }
+.reveal h2 { font-size: 2.2rem; }
+.reveal h3 { font-size: 1.9rem; }
+
+.reveal strong {
+  color: $jokull;
+  font-weight: 600;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal a {
+  color: $jokull;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($jokull, 0.25);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.reveal a:hover {
+  color: $jokull-hover;
+  border-bottom-color: $jokull;
+}
+
+// Hide empty `##` headings that exist only to anchor data-name attributes
+.reveal .slides section.no-heading > h2:first-child {
+  display: none;
+}
+
+// =========================================================================
+// TITLE SLIDE
+// =========================================================================
+
+#title-slide {
+  text-align: center;
+}
+
+#title-slide h1 {
+  font-family: $headings-font-family;
+  font-size: 3.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: $basalt;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid $border;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+#title-slide .subtitle {
+  font-family: $font-family-sans-serif;
+  font-size: 1.4rem;
+  color: rgba($basalt, 0.6);
+  margin-top: 0.6rem;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+#title-slide .author {
+  font-family: $font-family-sans-serif;
+  font-size: 1.2rem;
+  color: $basalt;
+  margin-top: 3rem;
+  font-weight: 500;
+}
+
+#title-slide .date {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  color: rgba($basalt, 0.5);
+  margin-top: 0.3rem;
+  letter-spacing: 0.04em;
+}
+
+// =========================================================================
+// SIMPLEMENU + FOOTER
+// =========================================================================
+
+.menubar {
+  font-family: $font-family-sans-serif;
+}
+
+.menubar .menu ul li {
+  list-style: none;
+}
+
+.menubar .menu ul li a {
+  color: rgba($basalt, 0.35);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  font-weight: 500;
+  border: none;
+  transition: color 0.2s ease;
+}
+
+.menubar .menu ul li.active a {
+  color: $jokull;
+  font-weight: 600;
+}
+
+.footer {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  color: rgba($basalt, 0.4);
+  letter-spacing: 0.04em;
+}
+
+.footer a {
+  color: rgba($basalt, 0.4);
+  text-decoration: none;
+  border: none;
+}
+
+.footer a:hover {
+  color: $jokull;
+}
+
+// =========================================================================
+// SLIDE 2 — LANDSCAPE GRID (4-project intro)
+// =========================================================================
+
+.landscape-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3.5rem;
+  max-width: 1500px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+}
+
+.landscape-project {
+  border-left: 3px solid $jokull;
+  padding-left: 1.4rem;
+}
+
+.landscape-project .project-name {
+  display: block;
+  color: $jokull;
+  font-family: $headings-font-family;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.landscape-project .project-tagline {
+  display: block;
+  color: rgba($basalt, 0.65);
+  font-family: $font-family-sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.landscape-project p {
+  margin: 0;
+}
+
+// =========================================================================
+// SCREENSHOT SLIDES (3, 4, 6) — site frame
+// =========================================================================
+
+img.site-frame,
+.site-frame img {
+  border: 1px solid $border;
+  border-radius: 6px;
+  box-shadow: 0 12px 40px rgba($basalt, 0.10);
+  background: $surface;
+}
+
+// =========================================================================
+// SLIDE 5 — chart + Miðeind callout
+// =========================================================================
+
+.chart-callout {
+  font-family: $font-family-sans-serif;
+  border-left: 3px solid $jokull;
+  padding: 0.6rem 0 0.6rem 1.4rem;
+  margin-top: 4rem;
+}
+
+.chart-callout .label {
+  font-size: 0.85rem;
+  color: rgba($basalt, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.chart-callout .name {
+  font-family: $headings-font-family;
+  font-size: 1.9rem;
+  color: $jokull;
+  font-weight: 500;
+  display: block;
+  letter-spacing: -0.01em;
+}
+
+// =========================================================================
+// SLIDE 7 — headline quote (Vísir)
+// =========================================================================
+
+.headline-quote {
+  font-family: $headings-font-family;
+  font-size: 3.2rem;
+  color: $basalt;
+  line-height: 1.3;
+  max-width: 1500px;
+  margin: 2rem auto 0;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding: 0 2rem;
+}
+
+.headline-quote::before {
+  content: "“";
+  font-family: $headings-font-family;
+  font-size: 6rem;
+  color: rgba($jokull, 0.25);
+  line-height: 0;
+  vertical-align: -0.3em;
+  margin-right: 0.2em;
+}
+
+.headline-quote strong {
+  font-weight: 600;
+  color: $jokull;
+}
+
+.headline-source {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 1.2rem;
+  color: rgba($basalt, 0.55);
+  margin-top: 2rem;
+  letter-spacing: 0.04em;
+  font-style: italic;
+  text-align: center;
+}
+
+// =========================================================================
+// SLIDE 8 — worked example pipeline (Claim → Evidence → Verdict)
+// =========================================================================
+
+.worked-example {
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.we-step {
+  background: rgba($jokull, 0.04);
+  border-left: 3px solid $jokull;
+  padding: 0.9rem 1.4rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.we-step.we-verdict {
+  background: rgba($midnaetursol, 0.08);
+  border-left-color: $midnaetursol;
+}
+
+.we-step .label {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $jokull;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.we-step.we-verdict .label {
+  color: $midnaetursol;
+}
+
+.we-step .content {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 1.5rem;
+  color: $basalt;
+  line-height: 1.4;
+}
+
+.we-step .content em {
+  font-style: italic;
+  color: rgba($basalt, 0.85);
+}
+
+.we-step p {
+  margin: 0.15rem 0;
+}
+
+// Auto-wrapped <p> children of .worked-example are arrow rows; center them
+.worked-example > p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.we-arrow {
+  color: rgba($basalt, 0.25);
+  font-size: 1.3rem;
+  line-height: 1;
+  letter-spacing: 0.4em;
+}
+
+.we-counts {
+  margin-top: 1.8rem;
+  font-family: $font-family-sans-serif;
+  font-size: 1.05rem;
+  color: rgba($basalt, 0.55);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.we-counts strong {
+  color: $jokull;
+  font-family: $headings-font-family;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0.15em;
+}
+
+// =========================================================================
+// SLIDE 10 — "An LLM is a tool" reframe (centered hinge)
+// =========================================================================
+
+.reframe {
+  text-align: center;
+  font-family: $headings-font-family;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.reframe p {
+  font-family: $headings-font-family;
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: $basalt;
+  margin: 1.2rem 0;
+  line-height: 1.2;
+}
+
+.reframe .fragment p {
+  color: $jokull;
+}
+
+.reframe .fragment:last-of-type p {
+  color: $midnaetursol;
+}
+
+// Force vertical centering for slide 10
+.reveal section.reframe-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+// =========================================================================
+// SLIDE 11 — three thinkers
+// =========================================================================
+
+.thinkers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1500px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.thinker {
+  padding: 0 1rem;
+}
+
+.thinker .thinker-name {
+  display: inline-block;
+  font-family: $headings-font-family;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: $basalt;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid rgba($jokull, 0.25);
+  padding-bottom: 0.6rem;
+}
+
+.thinker p {
+  margin: 0;
+}
+
+.thinker .tag {
+  font-family: $font-family-sans-serif;
+  font-size: 1.2rem;
+  color: $jokull;
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+  margin-top: 0.8rem;
+}
+
+// =========================================================================
+// SLIDE 12 — three tips
+// =========================================================================
+
+.three-tips {
+  max-width: 1400px;
+  margin: 1rem auto 0;
+}
+
+.three-tips > .fragment {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba($basalt, 0.08);
+}
+
+.three-tips > .fragment:last-child {
+  border-bottom: none;
+}
+
+.three-tips .tip {
+  font-family: $headings-font-family;
+  font-size: 2.1rem;
+  font-style: italic;
+  color: $basalt;
+  line-height: 1.4;
+  display: block;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.three-tips .attribution {
+  font-family: $font-family-sans-serif;
+  font-size: 1.1rem;
+  font-style: normal;
+  color: $jokull;
+  display: block;
+  margin-top: 0.4rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+// =========================================================================
+// SLIDE 13 — thank you + links
+// =========================================================================
+
+.reveal section.thank-you,
+.thank-you-slide {
+  text-align: center;
+}
+
+.reveal section.thank-you h2,
+.thank-you-slide h2 {
+  font-family: $headings-font-family;
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: $jokull;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.reveal section.thank-you ul,
+.thank-you-slide ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.reveal section.thank-you li,
+.thank-you-slide li {
+  font-family: $font-family-sans-serif;
+  font-size: 1.5rem;
+  margin: 0.6rem 0;
+  color: $basalt;
+}
+
+.reveal section.thank-you li a,
+.thank-you-slide li a {
+  color: $jokull;
+  font-weight: 500;
+  border-bottom: 1px solid rgba($jokull, 0.3);
+  padding-bottom: 0.1rem;
+}
+
+// =========================================================================
+// FRAGMENTS — gentler transitions
+// =========================================================================
+
+.reveal .slides section .fragment {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+// =========================================================================
+// LEGACY (kept for completeness, not used in this deck)
+// =========================================================================
+
+.center-vertical {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}

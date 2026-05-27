@@ -25,7 +25,7 @@ revealjs-plugins:
 
 [ESB-vaktin]{.project-name}
 
-[*EU referendum, fact-checked*]{.project-tagline}
+[*Overview of EU discussions*]{.project-tagline}
 
 :::
 
@@ -33,7 +33,7 @@ revealjs-plugins:
 
 [Þingfréttir]{.project-name}
 
-[*Alþingi pundit, in English*]{.project-tagline}
+[*Alþingi pundit, in Icelandic and English*]{.project-tagline}
 
 :::
 
@@ -71,12 +71,15 @@ revealjs-plugins:
 :::
 ::: {.column width="30%"}
 
-::: {.review-steps .fragment}
+::: {.review-steps}
 [Getting Icelandic right]{.label}
 
+::: {.incremental}
 1. Access to raw texts
 2. No English in context
 3. Miðeind tools
+:::
+
 :::
 
 :::

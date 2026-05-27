@@ -41,7 +41,7 @@ revealjs-plugins:
 
 [Metill.is]{.project-name}
 
-[*Public-interest data platform*]{.project-tagline}
+[*Public-data platform*]{.project-tagline}
 
 :::
 
@@ -49,7 +49,7 @@ revealjs-plugins:
 
 [Sirkabát]{.project-name}
 
-[*Podcast with Georg Gylfason*]{.project-tagline}
+[*Podcast with Georg Gylfason at Gímaldið*]{.project-tagline}
 
 :::
 

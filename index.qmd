@@ -10,7 +10,7 @@ format:
     simplemenu:
       flat: false
       barhtml:
-        header: "<div class='menubar mb-10'><ul class='menu'></ul><div>"
+        header: "<div class='menubar mb-10'><ul class='menu'></ul></div>"
         footer: "<div class='footer footer-default' style='display: block;'> <a href='https://metill.is/databeers15' target='_blank'>metill.is/databeers15</a></div>"
 html-math-method: plain
 revealjs-plugins:

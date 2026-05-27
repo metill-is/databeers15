@@ -96,6 +96,38 @@ $link-hover-color:              $jokull-hover;
 }
 
 // =========================================================================
+// SAFE ZONES — reserve space for the simplemenu (top) and footer (bottom),
+// and restore vertical centering on .no-heading sections.
+//
+// The simplemenu bar floats at top:0 / position:absolute with no automatic
+// space reservation. Without padding, slide content draws *under* it.
+// Likewise, hiding the leading `## ` heading on .no-heading sections
+// collapses Reveal's centering math — content sticks to the top.
+// =========================================================================
+
+$menubar-safe:  100px;
+$footer-safe:   55px;
+
+.reveal .slides > section:not(#title-slide) {
+  box-sizing: border-box;
+  padding-top:    $menubar-safe;
+  padding-bottom: $footer-safe;
+}
+
+// Vertical centering for slides that have no visible heading — but skip
+// sections that contain a Reveal auto-stretched image (`.r-stretch`), since
+// Reveal's stretch JS calculates dimensions assuming a default block layout
+// and produces 0×0 when wrapped in a flex container.
+.reveal .slides > section.no-heading:not(:has(.r-stretch)),
+.reveal .slides > section.thank-you {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100%;
+}
+
+// =========================================================================
 // TITLE SLIDE
 // =========================================================================
 
@@ -236,6 +268,17 @@ img.site-frame,
   border-radius: 6px;
   box-shadow: 0 12px 40px rgba($basalt, 0.10);
   background: $surface;
+}
+
+// Cap image height when Reveal's auto-stretch is NOT in play (e.g. images
+// inside `::: columns`). Stretched images carry the .r-stretch class —
+// excluding them avoids fighting Reveal's runtime sizing.
+img.site-frame:not(.r-stretch),
+.site-frame:not(.r-stretch) img {
+  max-height: 520px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 // =========================================================================
@@ -426,14 +469,8 @@ img.site-frame,
   color: $midnaetursol;
 }
 
-// Force vertical centering for slide 10
-.reveal section.reframe-slide {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-}
+// (Slide 10 vertical centering is now handled by the general .no-heading rule
+// in the SAFE ZONES section.)
 
 // =========================================================================
 // SLIDE 11 — three thinkers

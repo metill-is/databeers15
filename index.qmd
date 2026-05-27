@@ -94,39 +94,29 @@ revealjs-plugins:
 
 ## {.no-heading}
 
-::: {.worked-example}
+::::: {.pipeline-example}
 
-::: {.we-step}
+:::: {.ex-cell}
+[Claim]{.ex-label}
 
-[Claim]{.label}
+[*"Iceland has adopted 80% of EU regulation"*]{.ex-content}
+::::
 
-[*"Iceland has adopted 80% of EU regulation"*]{.content}
+[→]{.ex-arrow}
 
-:::
+:::: {.ex-cell}
+[Evidence]{.ex-label}
 
-[↓]{.we-arrow}
+[[EEA-LEGAL-001]{.ev-id} · [EEA-DATA-017]{.ev-id} · [EEA-LEGAL-006]{.ev-id}]{.ex-content}
+::::
 
-::: {.we-step}
+[→]{.ex-arrow}
 
-[Evidence]{.label}
+[Partially confirmed]{.ex-verdict .ex-verdict--partial}
 
-[EEA-LEGAL-001 · EEA-DATA-017 · EEA-LEGAL-006]{.content}
+:::::
 
-:::
-
-[↓]{.we-arrow}
-
-::: {.we-step .we-verdict}
-
-[Verdict]{.label}
-
-[Partially confirmed]{.content}
-
-:::
-
-:::
-
-::: {.we-counts}
+::: {.pipeline-counts}
 **503** articles · **2,673** claims · **516** sources
 :::
 

@@ -354,76 +354,106 @@ img.site-frame:not(.r-stretch),
 }
 
 // =========================================================================
-// SLIDE 8 — worked example pipeline (Claim → Evidence → Verdict)
+// SLIDE 8 — pipeline example (Claim → Evidence → Verdict)
+//
+// Horizontal row layout adapted from the Nordic House deck's
+// `.pipeline-example`. Single flex row with labelled cells separated by
+// arrows; verdict styled as a coloured pill at the end. Reads at a glance.
 // =========================================================================
 
-.worked-example {
-  max-width: 1200px;
+.pipeline-example {
+  max-width: 1500px;
   margin: 1rem auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.we-step {
-  background: rgba($jokull, 0.04);
+  padding: 1.2rem 1.4rem;
   border-left: 3px solid $jokull;
-  padding: 0.9rem 1.4rem;
+  background: rgba($jokull, 0.05);
   border-radius: 0 6px 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: nowrap;
 }
 
-.we-step.we-verdict {
-  background: rgba($midnaetursol, 0.08);
-  border-left-color: $midnaetursol;
+.pipeline-example > p {
+  margin: 0;
 }
 
-.we-step .label {
-  display: block;
+.pipeline-example .ex-cell {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pipeline-example .ex-cell > p {
+  margin: 0;
+}
+
+.pipeline-example .ex-label {
   font-family: $font-family-sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: $jokull;
+  color: rgba($basalt, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 0.2rem;
-}
-
-.we-step.we-verdict .label {
-  color: $midnaetursol;
-}
-
-.we-step .content {
   display: block;
-  font-family: $font-family-sans-serif;
-  font-size: 1.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.pipeline-example .ex-content {
+  font-family: $headings-font-family;
+  font-size: 1.15rem;
   color: $basalt;
-  line-height: 1.4;
+  line-height: 1.35;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
-.we-step .content em {
+.pipeline-example .ex-content em {
   font-style: italic;
-  color: rgba($basalt, 0.85);
 }
 
-.we-step p {
-  margin: 0.15rem 0;
+.pipeline-example .ex-content .ev-id {
+  font-family: $font-family-monospace;
+  font-size: 0.95rem;
+  color: $jokull;
+  font-weight: 500;
 }
 
-// Auto-wrapped <p> children of .worked-example are arrow rows; center them
-.worked-example > p {
-  text-align: center;
-  margin: 0.5rem 0;
+.pipeline-example .ex-arrow {
+  color: rgba($basalt, 0.3);
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  align-self: center;
 }
 
-.we-arrow {
-  color: rgba($basalt, 0.25);
-  font-size: 1.3rem;
-  line-height: 1;
-  letter-spacing: 0.4em;
+.pipeline-example .ex-verdict {
+  font-family: $font-family-sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  align-self: center;
+  letter-spacing: 0.01em;
 }
 
-.we-counts {
-  margin-top: 1.8rem;
+.ex-verdict--partial {
+  color: $midnaetursol;
+  background: rgba($midnaetursol, 0.12);
+}
+
+.ex-verdict--confirmed {
+  color: #2e6a4f;
+  background: rgba(#2e6a4f, 0.12);
+}
+
+.ex-verdict--misleading {
+  color: #a63a2b;
+  background: rgba(#a63a2b, 0.12);
+}
+
+.pipeline-counts {
+  margin-top: 2.2rem;
   font-family: $font-family-sans-serif;
   font-size: 1.05rem;
   color: rgba($basalt, 0.55);
@@ -431,7 +461,7 @@ img.site-frame:not(.r-stretch),
   letter-spacing: 0.02em;
 }
 
-.we-counts strong {
+.pipeline-counts strong {
   color: $jokull;
   font-family: $headings-font-family;
   font-size: 1.4rem;

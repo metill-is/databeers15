@@ -80,6 +80,17 @@ revealjs-plugins:
 :::
 :::
 
+## {.no-heading}
+
+::: {.image-stack}
+![](Figures/thingfrettir_viz1.png){.stack-image .fragment}
+![](Figures/thingfrettir_viz2.png){.stack-image .fragment}
+![](Figures/thingfrettir_viz3.png){.stack-image .fragment}
+![](Figures/thingfrettir_viz4.png){.stack-image .fragment}
+![](Figures/thingfrettir_viz5.png){.stack-image .fragment}
+![](Figures/thingfrettir_viz6.png){.stack-image .fragment}
+:::
+
 ## {data-name="ESB-vaktin" .no-heading}
 
 ![](Figures/esbvaktin-landing.png){.site-frame fig-align="center" width="72%"}

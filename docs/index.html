@@ -34,7 +34,7 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-eb630c88eb7829dc29ea9b7c0af775bc.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-cfaf6c5318042a259891e4aff48c3c21.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -204,21 +204,25 @@ Brynjólfur Gauti Guðrúnar Jónsson
 </section>
 <section id="section-6" class="slide level2 no-heading">
 <h2></h2>
-<div class="pipeline-example">
-<div class="ex-cell">
-<p><span class="ex-label">Claim</span></p>
-<p><span class="ex-content"><em>“Iceland has adopted 80% of EU regulation”</em></span></p>
+<div class="pipeline">
+<div class="pipeline-step fragment">
+<p><span class="pipeline-icon">1</span> <span class="pipeline-label">Discussion</span> <span class="pipeline-desc">Articles, speeches, and interviews scanned</span> <span class="pipeline-count">503 articles</span></p>
 </div>
-<p><span class="ex-arrow">→</span></p>
-<div class="ex-cell">
-<p><span class="ex-label">Evidence</span></p>
-<p><span class="ex-content"><span class="ev-id">EEA-LEGAL-001</span> · <span class="ev-id">EEA-DATA-017</span> · <span class="ev-id">EEA-LEGAL-006</span></span></p>
+<p><span class="pipeline-arrow">→</span></p>
+<div class="pipeline-step fragment">
+<p><span class="pipeline-icon">2</span> <span class="pipeline-label">Claims</span> <span class="pipeline-desc">Measurable assertions extracted</span> <span class="pipeline-count">2,673 logged</span></p>
 </div>
-<p><span class="ex-arrow">→</span></p>
-<p><span class="ex-verdict ex-verdict--partial">Partially confirmed</span></p>
+<p><span class="pipeline-arrow">→</span></p>
+<div class="pipeline-step fragment">
+<p><span class="pipeline-icon">3</span> <span class="pipeline-label">Sources</span> <span class="pipeline-desc">Cross-referenced with data and legal codes</span> <span class="pipeline-count">516 sources</span></p>
 </div>
-<div class="pipeline-counts">
-<p><strong>503</strong> articles · <strong>2,673</strong> claims · <strong>516</strong> sources</p>
+<p><span class="pipeline-arrow">→</span></p>
+<div class="pipeline-step fragment">
+<p><span class="pipeline-icon">4</span> <span class="pipeline-label">Verdict</span> <span class="pipeline-desc">Claims classified by quality</span> <span class="pipeline-verdicts"><span style="color:#2e6a4f">●</span> <span style="color:#8a6a1e">●</span> <span style="color:#6b6358">●</span> <span style="color:#a63a2b">●</span> <span style="color:#8b3d5e">●</span></span></p>
+</div>
+</div>
+<div class="pipeline-example fragment">
+<span class="ex-cell"><span class="ex-label">Article</span><span class="ex-content"><em>“The proportion is likely closer to 20% today, but a long way from 75–80%.”</em><span class="ex-source">Stjórnmálin · 24 March</span></span></span><span class="ex-arrow">→</span><span class="ex-cell"><span class="ex-label">Claim</span><span class="ex-content">“Iceland has adopted 80% of EU regulation”</span></span><span class="ex-arrow">→</span><span class="ex-cell"><span class="ex-label">Evidence</span><span class="ex-content"><span class="ev-id">EEA-LEGAL-001</span> · <span class="ev-id">EEA-DATA-017</span> · <span class="ev-id">EEA-LEGAL-006</span></span></span><span class="ex-arrow">→</span><span class="ex-verdict ex-verdict--partial">Partially confirmed</span>
 </div>
 </section>
 <section id="section-7" class="slide level2 no-heading">

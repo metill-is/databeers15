@@ -354,24 +354,115 @@ img.site-frame:not(.r-stretch),
 }
 
 // =========================================================================
-// SLIDE 8 — pipeline example (Claim → Evidence → Verdict)
+// SLIDE 8 — 4-step pipeline + worked example
 //
-// Horizontal row layout adapted from the Nordic House deck's
-// `.pipeline-example`. Single flex row with labelled cells separated by
-// arrows; verdict styled as a coloured pill at the end. Reads at a glance.
+// Lifted from talks/metill/nordic-house-2026/index.qmd slide 2 (Aðferð).
+// Top: a 4-step diagram mirroring esbvaktin.is's homepage pipeline
+// (Discussion → Claims → Sources → Verdict), each with an icon, label,
+// description, and running count. Bottom: a single-row .pipeline-example
+// walking one concrete claim through all four stages.
+//
+// Font sizes scaled ~35% down from Nordic House — that deck uses a
+// 1920×1080 slide canvas; databeers15 inherits Reveal's 960×700 default,
+// so the same rem values would feel oversized.
 // =========================================================================
 
+// --- 4-step pipeline diagram ------------------------------------------------
+
+.pipeline {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  margin: 0.5rem auto 0;
+  padding: 0 1rem;
+  max-width: 1600px;
+}
+
+.pipeline-step {
+  flex: 1;
+  max-width: 260px;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem 0.9rem;
+  background: rgba($surface, 0.6);
+  border: 1px solid $border;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.pipeline-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: $jokull;
+  color: $surface;
+  font-family: $headings-font-family;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pipeline-label {
+  font-family: $headings-font-family;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $basalt;
+  margin-top: 0.1rem;
+  display: block;
+  letter-spacing: -0.01em;
+}
+
+.pipeline-desc {
+  font-family: $font-family-sans-serif;
+  font-size: 0.95rem;
+  color: rgba($basalt, 0.6);
+  line-height: 1.35;
+  display: block;
+}
+
+.pipeline-count {
+  font-family: $headings-font-family;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: $jokull;
+  margin-top: 0.1rem;
+  display: block;
+}
+
+.pipeline-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  color: rgba($basalt, 0.3);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.pipeline-verdicts {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  margin-top: 0.25rem;
+  line-height: 1;
+}
+
+// --- Worked example row -----------------------------------------------------
+
 .pipeline-example {
-  max-width: 1500px;
-  margin: 1rem auto 0;
-  padding: 1.2rem 1.4rem;
+  max-width: 1600px;
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.2rem;
   border-left: 3px solid $jokull;
   background: rgba($jokull, 0.05);
   border-radius: 0 6px 6px 0;
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  flex-wrap: nowrap;
+  gap: 0.7rem 0.9rem;
+  flex-wrap: wrap;
+  row-gap: 0.6rem;
 }
 
 .pipeline-example > p {
@@ -401,7 +492,7 @@ img.site-frame:not(.r-stretch),
 
 .pipeline-example .ex-content {
   font-family: $headings-font-family;
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: $basalt;
   line-height: 1.35;
   font-weight: 400;
@@ -412,9 +503,19 @@ img.site-frame:not(.r-stretch),
   font-style: italic;
 }
 
+.pipeline-example .ex-content .ex-source {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  color: rgba($basalt, 0.55);
+  margin-top: 0.15rem;
+  white-space: nowrap;
+  font-style: normal;
+}
+
 .pipeline-example .ex-content .ev-id {
   font-family: $font-family-monospace;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: $jokull;
   font-weight: 500;
 }
@@ -428,9 +529,9 @@ img.site-frame:not(.r-stretch),
 
 .pipeline-example .ex-verdict {
   font-family: $font-family-sans-serif;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.7rem;
   border-radius: 4px;
   white-space: nowrap;
   align-self: center;
@@ -452,22 +553,7 @@ img.site-frame:not(.r-stretch),
   background: rgba(#a63a2b, 0.12);
 }
 
-.pipeline-counts {
-  margin-top: 2.2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 1.05rem;
-  color: rgba($basalt, 0.55);
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-.pipeline-counts strong {
-  color: $jokull;
-  font-family: $headings-font-family;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin: 0 0.15em;
-}
+// (The standalone counts caption is gone — counts live in .pipeline-step now.)
 
 // =========================================================================
 // SLIDE 10 — "An LLM is a tool" reframe (centered hinge)

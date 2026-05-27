@@ -94,31 +94,45 @@ revealjs-plugins:
 
 ## {.no-heading}
 
-::::: {.pipeline-example}
+<div class="pipeline">
 
-:::: {.ex-cell}
-[Claim]{.ex-label}
+<div class="pipeline-step fragment">
+  <span class="pipeline-icon">1</span>
+  <span class="pipeline-label">Discussion</span>
+  <span class="pipeline-desc">Articles, speeches, and interviews scanned</span>
+  <span class="pipeline-count">503 articles</span>
+</div>
 
-[*"Iceland has adopted 80% of EU regulation"*]{.ex-content}
-::::
+<span class="pipeline-arrow">→</span>
 
-[→]{.ex-arrow}
+<div class="pipeline-step fragment">
+  <span class="pipeline-icon">2</span>
+  <span class="pipeline-label">Claims</span>
+  <span class="pipeline-desc">Measurable assertions extracted</span>
+  <span class="pipeline-count">2,673 logged</span>
+</div>
 
-:::: {.ex-cell}
-[Evidence]{.ex-label}
+<span class="pipeline-arrow">→</span>
 
-[[EEA-LEGAL-001]{.ev-id} · [EEA-DATA-017]{.ev-id} · [EEA-LEGAL-006]{.ev-id}]{.ex-content}
-::::
+<div class="pipeline-step fragment">
+  <span class="pipeline-icon">3</span>
+  <span class="pipeline-label">Sources</span>
+  <span class="pipeline-desc">Cross-referenced with data and legal codes</span>
+  <span class="pipeline-count">516 sources</span>
+</div>
 
-[→]{.ex-arrow}
+<span class="pipeline-arrow">→</span>
 
-[Partially confirmed]{.ex-verdict .ex-verdict--partial}
+<div class="pipeline-step fragment">
+  <span class="pipeline-icon">4</span>
+  <span class="pipeline-label">Verdict</span>
+  <span class="pipeline-desc">Claims classified by quality</span>
+  <span class="pipeline-verdicts"><span style="color:#2e6a4f">●</span> <span style="color:#8a6a1e">●</span> <span style="color:#6b6358">●</span> <span style="color:#a63a2b">●</span> <span style="color:#8b3d5e">●</span></span>
+</div>
 
-:::::
+</div>
 
-::: {.pipeline-counts}
-**503** articles · **2,673** claims · **516** sources
-:::
+<div class="pipeline-example fragment"><span class="ex-cell"><span class="ex-label">Article</span><span class="ex-content"><em>"The proportion is likely closer to 20% today, but a long way from 75–80%."</em><span class="ex-source">Stjórnmálin · 24 March</span></span></span><span class="ex-arrow">→</span><span class="ex-cell"><span class="ex-label">Claim</span><span class="ex-content">"Iceland has adopted 80% of EU regulation"</span></span><span class="ex-arrow">→</span><span class="ex-cell"><span class="ex-label">Evidence</span><span class="ex-content"><span class="ev-id">EEA-LEGAL-001</span> · <span class="ev-id">EEA-DATA-017</span> · <span class="ev-id">EEA-LEGAL-006</span></span></span><span class="ex-arrow">→</span><span class="ex-verdict ex-verdict--partial">Partially confirmed</span></div>
 
 ## {.no-heading}
 

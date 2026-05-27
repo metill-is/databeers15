@@ -282,33 +282,54 @@ img.site-frame:not(.r-stretch),
 }
 
 // =========================================================================
-// SLIDE 5 — chart + Miðeind callout
+// SLIDE 5 — Icelandic article + "getting Icelandic right" steps
 // =========================================================================
 
-.chart-callout {
+.review-steps {
   font-family: $font-family-sans-serif;
   border-left: 3px solid $jokull;
-  padding: 0.6rem 0 0.6rem 1.4rem;
-  margin-top: 4rem;
+  padding: 0.5rem 0 0.5rem 1.2rem;
+  margin-top: 3rem;
 }
 
-.chart-callout .label {
-  font-size: 0.85rem;
+.review-steps .label {
+  font-size: 0.78rem;
   color: rgba($basalt, 0.5);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
   font-weight: 600;
 }
 
-.chart-callout .name {
+// Numbered list — drop default markers, use CSS counters for Jökull-teal
+// numbers that align with the Fraunces step text.
+.review-steps ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+}
+
+.review-steps ol li {
+  counter-increment: step;
   font-family: $headings-font-family;
-  font-size: 1.9rem;
+  font-size: 1.2rem;
+  color: $basalt;
+  line-height: 1.4;
+  padding: 0.35rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+
+.review-steps ol li::before {
+  content: counter(step);
   color: $jokull;
   font-weight: 500;
-  display: block;
-  letter-spacing: -0.01em;
+  font-size: 1rem;
+  min-width: 1.1rem;
+  font-family: $font-family-sans-serif;
 }
 
 // =========================================================================

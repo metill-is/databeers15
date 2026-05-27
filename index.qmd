@@ -67,14 +67,16 @@ revealjs-plugins:
 
 ::: columns
 ::: {.column width="70%"}
-![](Figures/thingfrettir-charts.png){.site-frame fig-align="center" width="100%"}
+![](Figures/thingfrettir-article-icelandic.png){.site-frame fig-align="center" width="100%"}
 :::
 ::: {.column width="30%"}
 
-::: {.chart-callout .fragment}
-[Icelandic review]{.label}
+::: {.review-steps .fragment}
+[Getting Icelandic right]{.label}
 
-[Miðeind]{.name}
+1. Access to raw texts
+2. No English in context
+3. Miðeind tools
 :::
 
 :::

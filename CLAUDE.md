@@ -2,8 +2,8 @@
 
 Deck slug: `databeers15`
 Talk date: 2026-05-27
-Repo: not yet created (will be `metill-is/databeers15` when published)
-Public URL: `metill.is/databeers15` (post-publish)
+Repo: `databeers15` (registered in `~/metill-platform/data/slides/registry.json`; `git remote -v` here shows the remote)
+Public URL: `metill.is/databeers15`
 
 ## Workflow status
 
